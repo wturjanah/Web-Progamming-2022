@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Validasi</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <script src="script.js"></script>
+</head>
+<body>
+    <div class="login">
+        <form action="#" method="post" onsubmit="validasi()">
+        <div>
+            <label>Nama Pelanggan:</label>
+            <input type="text" name="nama" id="nama" />
+        </div>
+        <div class="form-group">
+            <label>Email :</label>
+            <input type="email" name="email" placeholder="Email Aktif" class="form-control">
+            <small id="emailHelp" class="form-text text-muted">*Email akan digunakan untuk mengirimkan Notifikasi</small>
+        </div>
+        <div class="form-group">
+            <label>Jam Keberangkatan :</label>
+            <select name="jam Keberangkatan" class="form-control">
+                <option value="0"></option>
+                <option value="1">00.00 - 23.59</option>
+                <option value="2">07.00 - 09.00</option>
+                <option value="3">09.00 - 11.00</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label>Tujuan Keberangkatan :</label>
+            <select name="tujuan Keberangkatan" class="form-control">
+                <option value="0"></option>
+                <option value="1">Amerika</option>
+                <option value="1">Dubai</option>
+                <option value="1">Turki</option>
+                <option value="1">Jepang</option>
+            </select> 
+        </div>
+        <div class="form-group">
+            <label> jumlah Tiket :</label>
+            <select name="jumlah tiket" class="form-control">
+                <option value="0"></option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+                <option value="6">6</option>
+                <option value="7">7</option>
+                <option value="8">8</option>
+                <option value="9">9</option>
+                <option value="10">10</option>
+            </select>
+        </div>
+        <button type="submit" class="btn btn-primary">Sumbit</button>
+        </form>
+    </div>
+    <script>
+        function validateForm() {
+            if (document.forms["login"]["nama pelanggan"].value == "") {
+                alert("Nama Tidak Boleh Kosong");
+                document.forms["loginn"]["nama"].focus();
+                return false;
+            }
+            if (document.forms["login"]["email"].value == "") {
+                alert("Email Tidak Boleh Kosong");
+                document.forms["login"]["email"].focus();
+                return false;
+            }
+            if (document.forms["login"]["jam keberangkatan"].selectedIndex < 1) {
+                alert("jam keberangkatan.");
+                document.forms["login"]["jam keberangkatan"].focus();
+                return false;
+            }
+            if (document.forms["login"]["tujuan keberangkatan"].selectedIndex < 2) {
+                alert("tujuan keberangkatan.");
+                document.forms["login"]["tujuan keberangkatan"].focus();
+                return false;
+            }
+            if (document.forms["login"]["jumlah tiket"].selectedIndex < 3) {
+                alert("jumlah tiket.");
+                document.forms["login"]["jumlah tiket"].focus();
+                return false;
+            }
+            
+        }
+    </script>
+
+</body>
+</html>
